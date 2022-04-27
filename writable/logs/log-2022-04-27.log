@@ -1,0 +1,10 @@
+ERROR - 2022-04-27 05:57:27 --> Table 'qubehealth.users1' doesn't exist
+ERROR - 2022-04-27 05:58:19 --> Table 'qubehealth.users1' doesn't exist
+ERROR - 2022-04-27 06:00:59 --> Table 'qubehealth.users1' doesn't exist
+ERROR - 2022-04-27 06:02:00 --> Table 'qubehealth.users1' doesn't exist
+ERROR - 2022-04-27 06:02:34 --> Table 'qubehealth.users1' doesn't exist
+ERROR - 2022-04-27 06:03:04 --> Table 'qubehealth.users1' doesn't exist
+ERROR - 2022-04-27 06:03:54 --> Table 'qubehealth.users1' doesn't exist
+ERROR - 2022-04-27 06:54:51 --> Duplicate entry '7021407127' for key 'mobile_number'
+ERROR - 2022-04-27 06:55:44 --> Duplicate entry '7021407127' for key 'mobile_number'
+ERROR - 2022-04-27 07:03:42 --> Cannot add or update a child row: a foreign key constraint fails (`qubehealth`.`documents`, CONSTRAINT `mobile_foreign_key` FOREIGN KEY (`mobile_number`) REFERENCES `users` (`mobile_number`))
