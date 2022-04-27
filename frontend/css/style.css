@@ -9946,6 +9946,13 @@ h1, h2, h3, h4, h5,
 .btn:hover, .btn:active, .btn:focus {
   outline: none;
 }
+.btn.otp {
+  font-size: 12px;
+  padding: 5px 10px;
+  width: 20%;
+  height: 10%;
+  border-radius: 50px;
+}
 .btn.btn-primary {
   background: #f35588;
   border: 1px solid #f35588;
@@ -9960,9 +9967,9 @@ h1, h2, h3, h4, h5,
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f75959", endColorstr="#f35587", GradientType=1 );
 }
 .btn.btn-primary:hover {
-  border: 1px solid #f35588;
+  border: 1px solid #000;
   background: #f35588;
-  color: #fff;
+  color: #000;
 }
 .btn.btn-primary.btn-outline-primary {
   border: 1px solid #f35588;

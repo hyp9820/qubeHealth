@@ -285,15 +285,22 @@ h1, h2, h3, h4, h5,
 	&:hover, &:active, &:focus {
 		outline: none;
 	}
+	&.otp {
+		font-size: 12px;
+		padding: 5px 10px;
+		width: 20%;
+		height: 10%;
+		border-radius: 50px;
+	}
 	&.btn-primary {
 		background: $primary;
 		border: 1px solid $primary;
 		color: $white;
 		@include gradient-background();
 		&:hover {
-			border: 1px solid $primary;
+			border: 1px solid $black;
 			background: $primary;
-			color :$white;
+			color :$black;
 		}
 		&.btn-outline-primary {
 			border: 1px solid $primary;
