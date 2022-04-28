@@ -2,6 +2,14 @@ const userPhone = document.getElementById("userPhone");
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 
+let master;
+if(sessionStorage.getItem("master") === null) {
+    window.location.assign("./index.html");
+} else {
+    master = sessionStorage.getItem("master");
+}
+
+
 $("#userSubmit").click(() => {
 
     let pattern = /[1-9]{1}[0-9]{9}/;

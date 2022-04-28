@@ -126,8 +126,10 @@ const signInWithPhone = (sentCodeId, isMaster) => {
     .signInWithCredential(credential)
     .then(() => {
       if (isMaster) {
+        sessionStorage.setItem("master", masterPhone.value)
         window.location.assign("./masterProfile.html");
       } else {
+        sessionStorage.setItem("user", userPhone.value)
         window.location.assign("./userProfile.html");
       }
     })
