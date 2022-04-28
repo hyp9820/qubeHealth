@@ -1,5 +1,4 @@
 $(document).ready(() => {
-  // $("#fileNotFound").attr('style', 'display: none;');
   let user;
   if (sessionStorage.getItem("user") === null) {
     window.location.assign("./index.html");
@@ -17,7 +16,6 @@ $(document).ready(() => {
     })
       .done(function (response) {
         tbody.innerHTML = '';
-        $("#fileNotFound").attr('style', 'display: none;');
         for (var i = 0; i < response.length; i++) {
           var row = document.createElement("tr");
 
@@ -40,7 +38,6 @@ $(document).ready(() => {
         cell.textContent = e.responseJSON.messages.error;
         row.appendChild(cell);
         tbody.appendChild(row);
-        // $("#fileNotFound").attr('style', 'display: table-row;');
       });
   };
   getDocuments();
