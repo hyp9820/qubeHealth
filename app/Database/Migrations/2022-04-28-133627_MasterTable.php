@@ -21,6 +21,7 @@ class MasterTable extends Migration
             'created_at datetime default current_timestamp',
         ]);
         $this->forge->addPrimaryKey('id');
+        $this->forge->addUniqueKey('mobile_number');
         $this->forge->createTable('masters');
     }
 

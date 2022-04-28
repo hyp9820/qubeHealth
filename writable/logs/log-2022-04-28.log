@@ -1,1 +1,93 @@
 ERROR - 2022-04-28 08:41:34 --> Error connecting to the database: Unknown database 'qubehealth'
+ERROR - 2022-04-28 09:05:12 --> Unknown column 'file' in 'field list'
+CRITICAL - 2022-04-28 09:24:30 --> Array to string conversion
+#0 C:\xampp\htdocs\qubehealth\app\Controllers\Users.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 33, Array)
+#1 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(832): App\Controllers\Users->show('1')
+#2 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\qubehealth\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\qubehealth\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-28 09:25:28 --> Array to string conversion
+#0 C:\xampp\htdocs\qubehealth\app\Controllers\Users.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 33, Array)
+#1 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(832): App\Controllers\Users->show('1')
+#2 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\qubehealth\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\qubehealth\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-28 09:25:38 --> Array to string conversion
+#0 C:\xampp\htdocs\qubehealth\app\Controllers\Users.php(33): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 33, Array)
+#1 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(832): App\Controllers\Users->show('1')
+#2 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\qubehealth\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\qubehealth\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-28 10:06:31 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(832): App\Controllers\Users->getUserByPhone('7021407127')
+#1 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\qubehealth\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\qubehealth\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2022-04-28 10:08:21 --> Unknown column 'title' in 'field list'
+CRITICAL - 2022-04-28 10:08:21 --> Unknown column 'title' in 'field list'
+#0 C:\xampp\htdocs\qubehealth\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `title`\n...', 0)
+#1 C:\xampp\htdocs\qubehealth\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `title`\n...')
+#2 C:\xampp\htdocs\qubehealth\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `title`\n...')
+#3 C:\xampp\htdocs\qubehealth\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `title`\n...', Array, false)
+#4 C:\xampp\htdocs\qubehealth\app\Controllers\Users.php(119): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(832): App\Controllers\Users->getUserByPhone('7021407127')
+#6 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#7 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\qubehealth\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\qubehealth\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-04-28 10:08:44 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(832): App\Controllers\Users->getUserByPhone('7021407127')
+#1 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\qubehealth\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\qubehealth\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-28 10:11:11 --> Array to string conversion
+#0 C:\xampp\htdocs\qubehealth\app\Controllers\Users.php(120): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 120, Array)
+#1 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(832): App\Controllers\Users->getUserByPhone('7021407127')
+#2 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\qubehealth\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\qubehealth\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-28 10:13:46 --> Undefined offset: 0
+#0 C:\xampp\htdocs\qubehealth\app\Controllers\Users.php(117): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'C:\\xampp\\htdocs...', 117, Array)
+#1 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(832): App\Controllers\Users->getUserByPhone('702140712')
+#2 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\qubehealth\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\qubehealth\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-04-28 11:50:34 --> Duplicate entry '7021407127' for key 'mobile_number'
+CRITICAL - 2022-04-28 12:22:03 --> Call to undefined function App\Controllers\directory_map()
+#0 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(832): App\Controllers\Documents->show('7021407127')
+#1 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Documents))
+#2 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\qubehealth\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\qubehealth\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-04-28 12:30:14 --> Undefined variable: messages
+#0 C:\xampp\htdocs\qubehealth\app\Controllers\Documents.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 35, Array)
+#1 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(832): App\Controllers\Documents->show('7021407127')
+#2 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Documents))
+#3 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\qubehealth\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\qubehealth\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-04-28 12:30:28 --> Undefined variable: messages
+#0 C:\xampp\htdocs\qubehealth\app\Controllers\Documents.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 35, Array)
+#1 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(832): App\Controllers\Documents->show('7021407127')
+#2 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Documents))
+#3 C:\xampp\htdocs\qubehealth\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\qubehealth\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\qubehealth\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

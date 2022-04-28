@@ -334,3 +334,18 @@ h1, h2, h3, h4, h5,
 		}
 	}
 }
+
+td {
+	a {
+		transition: .3s all ease;
+		color: $white;
+		&:hover, &:focus {
+			text-decoration: none !important;
+			outline: none !important;
+			box-shadow: none;
+		}
+		&:hover {
+			color: black;
+		}
+	}
+}

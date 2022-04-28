@@ -34,6 +34,8 @@ $routes->setAutoRoute(true);
 // $routes->get('/', 'Home::index');
 $routes->resource('users');
 $routes->resource('documents');
+$routes->resource('masters');
+$routes->get('/getUserByPhone/(:segment)', 'Users::getUserByPhone/$1');
 
 
 /*

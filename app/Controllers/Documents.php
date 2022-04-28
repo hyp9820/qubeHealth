@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\Document;
 use CodeIgniter\RESTful\ResourceController;
 use Exception;
-
+helper('filesystem');
 class Documents extends ResourceController
 {
     /**
@@ -23,9 +23,21 @@ class Documents extends ResourceController
      *
      * @return mixed
      */
-    public function show($id = null)
+    public function show($phone = null)
     {
         //
+        
+        $files = directory_map("./assets/${phone}/");
+        if (($key = array_search("index.html", $files)) !== false) {
+            unset($files[$key]);
+        }
+        if (empty($files)) {
+            return $this->failNotFound("Files Not Found");
+        }
+        asort($files);
+
+        return $this->respond($files);
+
     }
 
     /**

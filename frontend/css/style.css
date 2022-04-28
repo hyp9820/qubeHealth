@@ -10002,4 +10002,17 @@ h1, h2, h3, h4, h5,
   color: #000;
 }
 
+td a {
+  transition: 0.3s all ease;
+  color: #fff;
+}
+td a:hover, td a:focus {
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none;
+}
+td a:hover {
+  color: black;
+}
+
 /*# sourceMappingURL=style.css.map */

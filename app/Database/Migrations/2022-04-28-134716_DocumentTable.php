@@ -18,6 +18,10 @@ class DocumentTable extends Migration
                 'type'  => 'VARCHAR',
                 'constraint' => 10,
             ],
+            'file' => [
+                'type'  => 'VARCHAR',
+                'constraint' => 255,
+            ],
             'created_at datetime default current_timestamp',
         ]);
         $this->forge->addPrimaryKey('id');

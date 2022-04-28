@@ -3,13 +3,15 @@
 namespace App\Controllers;
 
 use App\Models\User;
-// use CodeIgniter\API\ResponseTrait;
+use \Config\Database;
+use CodeIgniter\API\ResponseTrait;
 use CodeIgniter\RESTful\ResourceController;
 use Exception;
 
 class Users extends ResourceController
 {
-    // use ResponseTrait;
+    use ResponseTrait;
+
     /**
      * Return an array of resource objects, themselves in array format
      *
@@ -17,7 +19,8 @@ class Users extends ResourceController
      */
     public function index()
     {
-        //
+        $userModel = new User();
+        return $this->respond($userModel->findAll());
     }
 
     /**
@@ -27,7 +30,12 @@ class Users extends ResourceController
      */
     public function show($id = null)
     {
-        //
+        $userModel = new User();
+        $user = $userModel->find($id);
+        if (empty($user)) {
+            return $this->failNotFound("User Not Found");
+        }
+        return $this->respond($user);
     }
 
     /**
@@ -101,5 +109,25 @@ class Users extends ResourceController
     public function delete($id = null)
     {
         //
+    }
+
+    /**
+     * Get the user resource by 'mobile_number' field
+     *
+     * @param number $phone
+     * @return mixed
+     */
+    public function getUserByPhone($phone = null)
+    {
+        $db = Database::connect();
+        try {
+            $user = $db->table("users")->where('mobile_number', $phone)->get()->getResultObject();
+            if (empty($user)) {
+                return $this->failNotFound("User Not Found!!");
+            }
+        } catch (Exception $e) {
+            return $this->failServerError($e->getMessage(), 'Server Error!');
+        }
+        return $this->respond($user[0]);
     }
 }
