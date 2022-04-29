@@ -1,5 +1,11 @@
 # QubeHealth Master/User Login & Document Module
 
+## Resources
+
+- [Assignment PDF](https://github.com/hyp9820/qubeHealth/blob/main/assignment/Assignment%20FullStack%20Developer%20-%20QubeHealth%2031st%20Mar%202022.pdf)
+- [Postman API Collection](https://documenter.getpostman.com/view/7090186/UyrGADTg)
+
+
 ## Prerequisites
 - CodeIgniter 4
   - PHP version 7.3 or newer is required, with the *intl* extension and *mbstring* extension installed.
@@ -82,3 +88,11 @@ https://hyp9820.github.io/qubehealth-frontend/
 
 ## Outputs and Screenshots
 
+### Home Page
+![Home Page](/assignment/HomePage.png)
+
+### Master Page
+![Master Page](/assignment/MasterPage.png)
+
+### User Page
+![User Page](/assignment/UserPage.png)
