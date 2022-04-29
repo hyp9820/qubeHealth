@@ -84,40 +84,44 @@ $(document).ready(() => {
       phoneNumber = masterPhone.value;
     } else {
       phoneNumber = userPhone.value;
-      await $.ajax(
-        {
-          "url": "http://localhost:8080/getUserByPhone/"+phoneNumber,
-          "method": "GET",
-          "timeout": 0,
-        }
-      ).done((response) => {
-        console.log(response);
-      }).fail((e) => {
+      await $.ajax({
+        url: "http://localhost:8080/getUserByPhone/" + phoneNumber,
+        method: "GET",
+        timeout: 0,
+      })
+        .done((response) => {
+          console.log(response);
+        })
+        .fail((e) => {
           alert(e.responseJSON.messages.error);
           return false;
-      });
+        });
     }
-    
-   
 
     phoneNumber = "+91" + phoneNumber;
     const appVerifier = window.recaptchaVerifier;
-    await auth
-      .signInWithPhoneNumber(phoneNumber, appVerifier)
-      .then((confirmationResult) => {
-        const sentCodeId = confirmationResult.verificationId;
-        console.log("SMS Sent" + sentCodeId);
-        alert("OTP Sent");
-        if (isMaster) {
-          $("#masterSubmit").click(() => {
-            signInWithPhone(sentCodeId, isMaster);
-          });
-        } else {
-          $("#userSubmit").click(() => {
-            signInWithPhone(sentCodeId, isMaster);
-          });
-        }
-      });
+    try {
+      await auth
+        .signInWithPhoneNumber(phoneNumber, appVerifier)
+        .then((confirmationResult) => {
+          const sentCodeId = confirmationResult.verificationId;
+          console.log("SMS Sent" + sentCodeId);
+          alert("OTP Sent");
+          if (isMaster) {
+            $("#masterSubmit").click(() => {
+              signInWithPhone(sentCodeId, isMaster);
+            });
+          } else {
+            $("#userSubmit").click(() => {
+              signInWithPhone(sentCodeId, isMaster);
+            });
+          }
+        });
+    } catch (error) {
+      // ? Captcha Issue workaround
+      window.location.reload();
+      alert("Something went wrong. Please try again");
+    }
   };
 
   // ? Handle Signing User with Verification Code
@@ -147,19 +151,21 @@ $(document).ready(() => {
           var form = new FormData();
           form.append("mobile_number", masterPhone.value);
           await $.ajax({
-            "url": "http://localhost:8080/masters/create",
-            "method": "POST",
-            "timeout": 0,
-            "processData": false,
-            "mimeType": "multipart/form-data",
-            "contentType": false,
-            "data": form
-          }).done(function (response) {
-            console.log(response);
-          }).fail((e) => {
-            alert(e.responseJSON.messages.error);
-            return false;
-          });
+            url: "http://localhost:8080/masters/create",
+            method: "POST",
+            timeout: 0,
+            processData: false,
+            mimeType: "multipart/form-data",
+            contentType: false,
+            data: form,
+          })
+            .done(function (response) {
+              console.log(response);
+            })
+            .fail((e) => {
+              alert(e.responseJSON.messages.error);
+              return false;
+            });
 
           window.location.assign("./masterProfile.html");
         } else {
